@@ -442,7 +442,6 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 
   .wrapper {
-    background: url(../img/hero.webp);
     max-width: 100%;
     height: 100vh;
     background-size: cover;
