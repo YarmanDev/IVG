@@ -1,8 +1,6 @@
 let projectFolder = require("path").basename(__dirname);
 let sourceFolder = '#src';
-
 let fs = require('fs');
-
 let path = {
     build: {
         html: `${projectFolder}/`,
@@ -47,7 +45,6 @@ let { src, dest } = require('gulp'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
     fonter = require('gulp-fonter');
-
 function browserSync(arguments) {
     browsersync.init({
         server: {
@@ -102,9 +99,7 @@ function js() {
         .pipe(fileInclude())
         .pipe(dest(path.build.js))
         .pipe(babel())
-        .pipe(
-            terser()
-        )
+        .pipe(terser())
         .pipe(
             rename({
                 extname: ".min.js"
@@ -113,6 +108,8 @@ function js() {
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream())
 }
+
+
 
 function images() {
     return src(path.src.img)
