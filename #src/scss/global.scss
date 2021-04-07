@@ -1,0 +1,59 @@
+//====================================================================================================
+.underline-red__triangle{
+    &::after{
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: #ff0617;
+        left: 0;
+        bottom: -5px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 20px;
+        bottom: -15px;
+        border-style: solid;
+        border-color: #ff0617 transparent transparent transparent;
+        border-width: 10px 8.5px 0 8.5px;
+    }
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 300;
+    >span{
+        font-weight: 700;
+        position: relative;
+    }
+    margin-bottom: 45px;
+}
+#house {
+    fill: transparent;
+    stroke-width: 4;
+    stroke: #F20E0B;
+    stroke-dasharray: 105;
+    stroke-dashoffset:0;
+    animation: house 2.6s ease-out infinite;
+}
+
+@keyframes house{
+    0%{
+        stroke-dashoffset: 105;
+        stroke: #707072;
+    }
+    20%{
+        stroke: #707072;
+    }
+    40%{
+        stroke: #F20E0B;
+    }
+    
+    100%{
+        stroke-dashoffset: 0;
+        stroke: #F20E0B;
+    }
+
+}
+//====================================================================================================

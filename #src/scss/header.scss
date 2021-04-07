@@ -57,32 +57,7 @@
     background-size: 40px 40px;
 
 }
-#house {
-    fill: transparent;
-    stroke-width: 4;
-    stroke: #F20E0B;
-    stroke-dasharray: 105;
-    stroke-dashoffset:0;
-    animation: house 2.6s ease-out infinite;
-}
-@keyframes house{
-    0%{
-        stroke-dashoffset: 105;
-        stroke: #707072;
-    }
-    20%{
-        stroke: #707072;
-    }
-    40%{
-        stroke: #F20E0B;
-    }
-    
-    100%{
-        stroke-dashoffset: 0;
-        stroke: #F20E0B;
-    }
 
-}
 
 //====================================================================================================
 
