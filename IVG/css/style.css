@@ -100,6 +100,13 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body.lock {
@@ -109,6 +116,13 @@ body.lock {
 html,
 body {
   overflow-x: hidden;
+  height: 100%;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .wrapper {
@@ -124,6 +138,9 @@ body {
 
 .header {
   background: #fff;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .header__top {
@@ -178,7 +195,7 @@ body {
   content: '';
   display: inline-block;
   background: url("../img/icons/phone-icon.webp") left no-repeat;
-  width: 100%;
+  width: 40px;
   height: 100%;
   position: absolute;
   left: -50px;
@@ -190,7 +207,7 @@ body {
   content: '';
   display: inline-block;
   background: url("../img/icons/compass-icon.webp") left no-repeat;
-  width: 100%;
+  width: 40px;
   height: 100%;
   position: absolute;
   left: -50px;
@@ -343,8 +360,148 @@ body._touch .menu__list > li._active .menu__arrow {
           transform: rotate(-180deg);
 }
 
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  background-color: #13202a;
+}
+
+.footer-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 50px;
+  color: #9a9dbd;
+}
+
+.footer-item__title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-item__title > span {
+  font-weight: 600;
+}
+
+.footer-item__icons {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-item__icons > a > svg {
+  width: 40px;
+  height: 42px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.footer-item__icons > a > svg:hover > g > path {
+  -webkit-animation: frame 1.3s ease 1;
+          animation: frame 1.3s ease 1;
+}
+
+.contacts-footer__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -100px;
+}
+
+.contacts-footer__item {
+  font-size: 13px;
+  margin-left: 100px;
+}
+
+.contacts-footer__title {
+  font-weight: 600;
+  margin-bottom: 7px;
+  position: relative;
+}
+
+.contacts-footer__info {
+  font-weight: 300;
+  margin-bottom: 17px;
+  color: inherit;
+}
+
+.contacts-footer__info > a {
+  color: inherit;
+}
+
+.contacts-footer__info:hover {
+  color: #9d3131;
+}
+
+.contacts-footer__info:last-child {
+  margin: 0;
+}
+
+#gmail-icon__stroke {
+  fill: #9d3131;
+}
+
+#icon-frame {
+  stroke-dasharray: 300px;
+  stroke-dashoffset: 0px;
+}
+
+@-webkit-keyframes frame {
+  0% {
+    stroke-dashoffset: 300px;
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes frame {
+  0% {
+    stroke-dashoffset: 300px;
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+.location::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url(../img/icons/location.svg) center/cover no-repeat;
+  top: -3px;
+  left: -16px;
+}
+
+.email::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url(../img/icons/email.svg) center/cover no-repeat;
+  top: -1px;
+  left: -19px;
+}
+
+.call::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url(../img/icons/call.svg) center/cover no-repeat;
+  top: -3px;
+  left: -18px;
+}
+
 .home-gallery {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .home-gallery__buttons {
@@ -425,7 +582,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .feedbacks {
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
   padding-top: 35px;
 }
 
@@ -470,6 +627,7 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #373131ab;
   font-weight: 500;
   position: relative;
+  border-radius: 15px;
 }
 
 .item-feedbacks__quote::before {
@@ -506,6 +664,84 @@ body._touch .menu__list > li._active .menu__arrow {
   margin-bottom: 15px;
 }
 
+.news-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  margin-left: -30px;
+  margin-bottom: 100px;
+}
+
+.news-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  margin-left: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-item__date {
+  background-color: #ff0617;
+  font-size: 21px;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 55px;
+  z-index: 2;
+}
+
+.news-item__image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+.news-item__image:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.news-item__subtitle {
+  font-size: 16px;
+  margin: 20px 0 15px 0;
+  font-weight: 500;
+  color: #65666f;
+}
+
+.news-item__content {
+  color: #65666f;
+  font-size: 14px;
+  text-transform: none;
+}
+
 .burger-menu__checkbox {
   display: none;
 }
@@ -539,6 +775,22 @@ body._touch .menu__list > li._active .menu__arrow {
 .title > span {
   font-weight: 700;
   position: relative;
+}
+
+body._touch .fixed-phone {
+  display: none;
+}
+
+body._pc .fixed-phone {
+  position: fixed;
+  top: 100px;
+  right: 17px;
+  z-index: 100;
+}
+
+body._pc .fixed-phone > svg {
+  width: 45px;
+  height: 45px;
 }
 
 #house {

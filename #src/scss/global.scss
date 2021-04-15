@@ -29,6 +29,22 @@
     }
     margin-bottom: 45px;
 }
+body._touch .fixed-phone{
+    display: none;
+}
+body._pc .fixed-phone{
+position: fixed;
+        top: 100px;
+        right: 17px;
+        z-index: 100;
+      >svg{
+        width: 45px;
+        height: 45px;
+    }
+      }
+
+
+
 #house {
     fill: transparent;
     stroke-width: 4;

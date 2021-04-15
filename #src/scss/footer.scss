@@ -1,5 +1,123 @@
-footer{}
 //====================================================================================================
+.footer {
+    flex: 0 0 auto;
+    background-color: #13202a;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px;
+    color: #9a9dbd;
+}
+.footer-item {
+
+    &__title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center;
+        >span{
+            font-weight: 600;
+        }
+    }
+    
+    &__icons{
+       >a >svg{
+            width: 40px;
+            height: 42px;
+            margin-left: 5px;
+            cursor: pointer;
+            &:hover{
+                >g>path{
+                    animation: frame 1.3s ease 1;
+
+                }
+            }
+
+        }
+        margin-bottom: 20px;
+        text-align: center;
+        
+    }
+}
+.contacts-footer {
+
+
+    &__items {
+        display: flex;
+        margin-left: -100px;
+    }
+
+    &__item {
+        font-size: 13px;
+        margin-left: 100px;
+    }
+
+    &__title {
+        font-weight: 600;
+        margin-bottom: 7px;
+        position: relative;
+
+        }
+
+
+    &__info {
+        font-weight: 300;
+        margin-bottom: 17px;
+        color: inherit;
+        >a{
+            color: inherit;
+        }
+        &:hover{
+            color: #9d3131;
+        }
+        &:last-child{
+            margin: 0; 
+        }
+    }
+}
 
 //====================================================================================================
+#gmail-icon__stroke{
+    fill: #9d3131;
+}
 
+#icon-frame{
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 0px;
+}
+@keyframes frame {
+    0%{
+        stroke-dashoffset: 300px;
+    }
+    100%{
+        stroke-dashoffset: 0px;
+    }
+}
+.location::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../img/icons/location.svg) center/cover no-repeat;
+    top: -3px;
+    left: -16px;
+}
+.email::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../img/icons/email.svg) center/cover no-repeat;
+    top: -1px;
+    left: -19px;
+}
+.call::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../img/icons/call.svg) center/cover no-repeat;
+    top: -3px;
+    left: -18px;
+}
