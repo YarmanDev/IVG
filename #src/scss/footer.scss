@@ -45,12 +45,15 @@
 
     &__items {
         display: flex;
-        margin-left: -100px;
+        margin: 0 0 15px -100px;
+
     }
 
     &__item {
         font-size: 13px;
         margin-left: 100px;
+        font-size: 14px;
+
     }
 
     &__title {
@@ -67,6 +70,7 @@
         color: inherit;
         >a{
             color: inherit;
+
         }
         &:hover{
             color: #9d3131;
@@ -75,6 +79,12 @@
             margin: 0; 
         }
     }
+}
+.phone{
+    white-space: nowrap;
+}
+.footer-item__copyright{
+    text-align: center;
 }
 
 //====================================================================================================
@@ -121,3 +131,29 @@
     top: -3px;
     left: -18px;
 }
+//====================================================================================================
+@media (max-width:767.98px){
+    .footer-items{
+        flex-direction: column;
+        // text-align: center;    
+    }
+    .contacts-footer{
+        &__items{
+            flex-direction: column;
+        }
+        &__item{
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+    }
+
+}
+
+@media (min-width:767px){
+    .footer-item__copyright{
+        max-width: 305px;
+    }
+}
+
+//====================================================================================================

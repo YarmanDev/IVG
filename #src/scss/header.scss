@@ -1,19 +1,9 @@
 //====================================================================================================
-.header {
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    background: #fff;
-    flex: 0 0 auto;
-}
 .row-top {  
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 12.5px;
-
     &__column {   
         text-align: left;
         padding-right: 80px;
@@ -22,6 +12,8 @@
         }
         > p{
             padding-bottom: 3px;
+            line-height: 1.15;
+
             &:first-child{
                 font-weight: 700;
                 padding-bottom: 6px;
@@ -35,7 +27,7 @@
 .left-column::before{
     content: '';
     display: inline-block;
-    background: url("../img/icons/phone-icon.webp") left no-repeat;
+    background: url(../img/icons/phone-icon.webp) center/cover no-repeat;
     width: 40px;
     height: 100%;
 
@@ -48,7 +40,7 @@
 .right-column::before{
     content: '';
     display: inline-block;
-    background: url("../img/icons/compass-icon.webp") left no-repeat;
+    background: url(../img/icons/compass-icon.webp) center/cover no-repeat;
     width: 40px;
     height: 100%;
 
@@ -57,6 +49,9 @@
     top: 9px;
     background-size: 40px 40px;
 
+}
+.top-header__logo{
+    text-align: center;
 }
 
 
@@ -123,6 +118,15 @@
 
 //====================================================================================================
 @media (min-width:767px){
+    .header {
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        background: #fff;
+        flex: 0 0 auto;
+    }
     .menu__list{
         display: flex;
         justify-content: space-around;
@@ -167,6 +171,82 @@
     }
 }
 
+
+@media (max-width:767.98px){
+    .header{
+        background-color: rgba(#2b2e4a,0.2);
+    }
+    .top-header{
+        border-bottom: 3.7px solid #ff0617;
+    }
+    .menu{
+    background: url(../img/hero.webp) center/cover no-repeat;
+    max-width: 100%;
+    height: 90vh;
+    &__body{
+        height: 0;
+    }
+    margin-bottom: 55px;
+    }
+    .row-top{
+    padding: 0 50px;
+    }
+    .left-column::before{
+        content: '';
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 15%;
+    
+        position: absolute;
+        left: -40px;
+        top: 28px;
+        background-size: 30px 30px;
+    }
+    .right-column::before{
+        content: '';
+        display: inline-block;
+        background: url(../img/icons/compass-icon.webp) center/cover no-repeat;
+        width: 30px;
+        height: 30px;
+        border-radius: 15%;
+    
+        position: absolute;
+        left: -40px;
+        top: 28px;
+        background-size: 30px 30px;
+    
+    }
+    .top-header{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 100%;
+            bottom: -2px;
+            left: -10px;
+            background: url(../img/wave.svg) center/cover no-repeat;
+        }
+    }
+
+    .row-top{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:479.98px){
+    .top-header__row{
+        display: none;
+    }
+    .top-header{
+    
+        &::before{
+            position: relative;
+        }
+    }
+}
 
 //===============================================================================================
 body._pc .menu__list > li,body._touch .menu__list > li._active{
@@ -241,21 +321,6 @@ body._touch .menu__list > li._active .menu__arrow{
 }
 
 //===============================================================================================
-@media (max-width:767px){
-    .top-header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        &__row{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-    }
-}
 
 
 
