@@ -968,7 +968,7 @@ body._pc .fixed-phone > svg {
   }
 
   .menu {
-    background: url(../img/mobile-hero.webp) center/cover no-repeat;
+    background: url(../img/hero.webp) center/cover no-repeat;
     max-width: 100%;
     height: 90vh;
     margin-bottom: 55px;
