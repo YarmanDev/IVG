@@ -132,28 +132,28 @@
     left: -18px;
 }
 //====================================================================================================
-// @media (max-width:767.98px){
-//     .footer-items{
-//         flex-direction: column;
-//         // text-align: center;    
-//     }
-//     .contacts-footer{
-//         &__items{
-//             flex-direction: column;
-//         }
-//         &__item{
-//             font-size: 12px;
-//             margin-bottom: 10px;
-//         }
+@media (max-width:767.98px){
+    .footer-items{
+        flex-direction: column;
+        // text-align: center;    
+    }
+    .contacts-footer{
+        &__items{
+            flex-direction: column;
+        }
+        &__item{
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
         
-//     }
+    }
 
-// }
+}
 
-// @media (min-width:767px){
-//     .footer-item__copyright{
-//         max-width: 305px;
-//     }
-// }
+@media (min-width:767px){
+    .footer-item__copyright{
+        max-width: 305px;
+    }
+}
 
 //====================================================================================================

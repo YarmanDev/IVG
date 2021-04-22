@@ -823,6 +823,12 @@ body._pc .fixed-phone > svg {
   }
 }
 
+@media (min-width: 479.98px) {
+  .home-gallery__link:last-child {
+    display: none;
+  }
+}
+
 @media (min-width: 767px) {
   .header {
     background: #fff;
@@ -895,6 +901,10 @@ body._pc .fixed-phone > svg {
     max-width: 100%;
     height: 100vh;
   }
+
+  .footer-item__copyright {
+    max-width: 305px;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -948,9 +958,72 @@ body._pc .fixed-phone > svg {
     max-width: none;
     padding: 0 10px;
   }
+
+  .footer-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contacts-footer__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contacts-footer__item {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .home-gallery__images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 30px;
+  }
+
+  .home-gallery__link > img {
+    border-radius: 5%;
+  }
+
+  .feedbacks__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .item-feedbacks__quote {
+    min-height: 0;
+  }
 }
 
 @media (max-width: 767px) {
+  .news-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 20px 0;
+  }
+
+  .news-item {
+    margin: 0;
+  }
+
+  .news-item__content {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
   .burger-menu__icon {
     position: fixed;
     right: -100px;
@@ -1121,6 +1194,14 @@ body._pc .fixed-phone > svg {
 
   body._touch .menu__list > li._active .menu__sub-list {
     display: block;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .home-gallery__images {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 0px;
   }
 }
 
