@@ -202,7 +202,7 @@ body {
 }
 
 .menu {
-  margin-bottom: 90vh;
+  margin-bottom: 40px;
 }
 
 .menu__body {
@@ -214,7 +214,8 @@ body {
 .menu__sub-list {
   position: absolute;
   top: 100%;
-  min-width: 200px;
+  min-width: 180px;
+  z-index: 100;
   background-color: #fff;
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -239,6 +240,10 @@ body {
   z-index: 100;
 }
 
+.menu__sub-list > li:hover > a {
+  color: #ff0616;
+}
+
 .menu__sub-list > li:last-child {
   margin: 20px 0 12px 7px;
 }
@@ -250,12 +255,9 @@ body {
 .menu__sub-link {
   color: #13202a;
   position: relative;
+  line-height: 1.15;
   font-size: 14px;
   padding-right: 7px;
-}
-
-.menu__sub-link:hover {
-  color: #ff0616;
 }
 
 body._pc .menu__list > li:hover::after,
@@ -278,7 +280,7 @@ body._pc .hover-triangle:hover::before {
   border-style: solid;
   border-color: #ff0617 transparent transparent transparent;
   border-width: 10px 8.5px 0 8.5px;
-  z-index: 10;
+  z-index: 101;
 }
 
 body._pc .menu__list > li:hover .menu__sub-list {
@@ -497,6 +499,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .home-gallery {
   margin-bottom: 40px;
+  margin-top: 90vh;
 }
 
 .home-gallery__images {
@@ -809,6 +812,10 @@ body._pc .fixed-phone > svg {
   }
 }
 
+.gallery-container {
+  margin-bottom: 80px;
+}
+
 @media (min-width: 479.98px) {
   .home-gallery__link:last-child {
     display: none;
@@ -934,6 +941,11 @@ body._pc .fixed-phone > svg {
     grid-column: span 2;
   }
 
+  .home-gallery__link:nth-child(8) {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
   .home-gallery__link:last-child {
     display: block;
   }
@@ -970,19 +982,15 @@ body._pc .fixed-phone > svg {
     padding: 0 10px;
   }
 
-  .header {
-    background-color: rgba(43, 46, 74, 0.2);
-  }
-
   .top-header {
     border-bottom: 3.7px solid #ff0617;
+    background-color: rgba(43, 46, 74, 0.2);
   }
 
   .menu {
     background: url(../img/mobile-hero.webp) center/cover no-repeat;
     max-width: 100%;
     height: 90vh;
-    margin-bottom: 55px;
   }
 
   .menu__body {
@@ -1056,6 +1064,10 @@ body._pc .fixed-phone > svg {
     margin-bottom: 10px;
   }
 
+  .home-gallery {
+    min-height: 700px;
+  }
+
   .home-gallery__images {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -1079,6 +1091,10 @@ body._pc .fixed-phone > svg {
 }
 
 @media (max-width: 767px) {
+  .buttons-gallery__btn.roof-btn {
+    font-size: 21px;
+  }
+
   .news-items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
