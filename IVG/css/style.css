@@ -499,7 +499,6 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .home-gallery {
   margin-bottom: 40px;
-  margin-top: 90vh;
 }
 
 .home-gallery__images {
@@ -812,6 +811,22 @@ body._pc .fixed-phone > svg {
   }
 }
 
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .gallery-container {
   margin-bottom: 80px;
 }
@@ -902,7 +917,7 @@ body._pc .fixed-phone > svg {
     transition: all 0.3s ease;
   }
 
-  .wrapper {
+  .wrapper.home {
     background: url(../img/hero.webp) center/cover no-repeat;
     max-width: 100%;
     height: 100vh;
@@ -914,6 +929,10 @@ body._pc .fixed-phone > svg {
 }
 
 @media (min-width: 767.98px) {
+  .home-gallery {
+    margin-top: 90vh;
+  }
+
   .home-gallery__images {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -987,7 +1006,7 @@ body._pc .fixed-phone > svg {
     background-color: rgba(43, 46, 74, 0.2);
   }
 
-  .menu {
+  .home .menu {
     background: url(../img/mobile-hero.webp) center/cover no-repeat;
     max-width: 100%;
     height: 90vh;

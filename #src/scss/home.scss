@@ -1,7 +1,6 @@
 //====================================================================================================
 .home-gallery {
     margin-bottom: 40px;
-    margin-top: 90vh;
     &__images{
     margin-top: 20px;
     display: grid;
@@ -74,6 +73,8 @@
 }
 @media (min-width:767.98px){
     .home-gallery {
+    margin-top: 90vh;
+
     &__images {
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(2,1fr);
