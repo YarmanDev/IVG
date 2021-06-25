@@ -10702,12 +10702,43 @@ if (isMobile.any()) {
     mixitup.CORE_VERSION = '3.3.1';
 })(window);
 ;
+var myData = localStorage['objectToPass'];
+localStorage.removeItem('objectToPass'); // Clear the localStorage
+
+let buttons = document.querySelectorAll('.buttons-gallery__btn');
+for (let index = 0; index < buttons.length; index++) {
+    const element = buttons[index];
+    if (`.${myData}` == element.getAttribute("data-filter")) {
+        let mixer = mixitup('.home-gallery__inner', {
+            load: {
+                filter: `.${myData}`
+            }
+        });
+    }
+}
+
+;
 
 
 
 
-var mixer = mixitup('.home-gallery__inner', {
+let mixer = mixitup('.home-gallery__inner', {
     load: {
         filter: '.stairs'
     }
 });
+
+
+
+
+let subList = document.querySelectorAll(".menu__sub-list");
+
+
+for (let index = 0; index < subList.length; index++) {
+    const element = subList[index];
+    element.addEventListener('click', function (event) {
+        let target = event.target;
+        let myData = target.id;
+        localStorage.setItem('objectToPass', myData);
+    });
+}
