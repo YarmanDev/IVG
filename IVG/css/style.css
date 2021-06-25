@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900");
 
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
 * {
   padding: 0px;
   margin: 0px;
@@ -811,7 +813,167 @@ body._pc .fixed-phone > svg {
   }
 }
 
-.about {
+ol.gradient-list > li,
+ol.gradient-list > li::before {
+  -webkit-box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+          box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+
+.about-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-top__image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+  margin: 0 40px 100px 0;
+}
+
+.about-top__text > h2 {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.about-top__text > p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 45px;
+  line-height: 1.1;
+}
+
+ol.gradient-list {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+
+ol.gradient-list > li {
+  background: white;
+  line-height: 1.4;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  counter-increment: gradient-counter;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+  font-size: 15px;
+}
+
+ol.gradient-list > li::before,
+ol.gradient-list > li::after {
+  background: -o-linear-gradient(315deg, #83e4e2 0%, #a2ed56 100%);
+  background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  content: '';
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+
+ol.gradient-list > li::before {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  content: counter(gradient-counter);
+  color: #1d1f20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 900 1.5em/1 'Montserrat';
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+}
+
+ol.gradient-list > li:nth-child(10n+1):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+2):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+3):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+4):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+5):before {
+  background: -o-linear-gradient(315deg, #a2ed56 0%, #fddc32 100%);
+  background: linear-gradient(135deg, #a2ed56 0%, #fddc32 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+6):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+7):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+8):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+9):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+10):before {
+  background: -o-linear-gradient(315deg, rgba(162, 237, 86, 0) 0%, rgba(253, 220, 50, 0) 100%);
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0) 0%, rgba(253, 220, 50, 0) 100%);
+}
+
+ol.gradient-list > li + li {
+  margin-top: 2rem;
+}
+
+.about-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  height: 60vh;
+  margin: 50px auto;
+}
+
+.about-bottom__image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15%;
+}
+
+.about-bottom__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -821,10 +983,60 @@ body._pc .fixed-phone > svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75%;
+}
+
+.about-bottom__text > p {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 45px;
+  line-height: 1.2;
+}
+
+.contacts-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100%;
+  max-width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.contacts-inner .item-contacts {
+  text-align: center;
+}
+
+.contacts-inner .item-contacts__icon > svg {
+  width: 80px;
+  height: 100%;
+}
+
+.contacts-inner .item-contacts__title {
+  font-weight: 700;
+  font-family: "Abril Fatface";
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin: 20px auto 0;
+  color: #999999;
+}
+
+.contacts-inner .item-contacts > p {
+  font-size: 1.125rem;
+  margin: 20px auto 0;
 }
 
 .gallery-container {
@@ -1107,6 +1319,82 @@ body._pc .fixed-phone > svg {
   .item-feedbacks__quote {
     min-height: 0;
   }
+
+  .about-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about-bottom {
+    margin: 200px 0 230px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about-bottom__image {
+    display: block;
+    width: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15%;
+  }
+
+  .about-bottom__text {
+    width: 100%;
+  }
+
+  .about-bottom__text > p {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 45px;
+  }
+
+  .contacts-inner {
+    min-height: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .contacts-inner__item {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1335,5 +1623,18 @@ body._pc .fixed-phone > svg {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px 0px;
+  }
+
+  .about-top {
+    margin-bottom: 130px;
+  }
+
+  .about-top__image {
+    width: 75%;
+    margin: 0 40px 50px 0;
+  }
+
+  .about-bottom__text > p {
+    font-size: 20px;
   }
 }

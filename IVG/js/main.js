@@ -10703,7 +10703,7 @@ if (isMobile.any()) {
 })(window);
 ;
 var myData = localStorage['objectToPass'];
-localStorage.removeItem('objectToPass'); // Clear the localStorage
+localStorage.removeItem('objectToPass');
 
 let buttons = document.querySelectorAll('.buttons-gallery__btn');
 for (let index = 0; index < buttons.length; index++) {

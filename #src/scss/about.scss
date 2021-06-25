@@ -1,9 +1,221 @@
-.about{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
-&-info{
-    
+$black: #1d1f20;
+$blue: #83e4e2;
+$green: #a2ed56;
+$yellow: #fddc32;
+$white: #fafafa;
+
+
+%boxshadow {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
 }
+.about-top{
+    display: flex;
+    justify-content: space-between;
+    &__image{
+    height: 100%;
+    object-fit: cover;
+    width: 50%;
+    margin: 0 40px 100px 0;
+    }
+    &__text{
+        
+       >h2{
+        text-align: center;
+        font-size: 19px;
+        font-weight: 600;
+        margin-bottom: 25px;
+       }
+    >p{
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 45px;
+        line-height: 1.1;
+    }
+    }
+}
+//====================================================================================================
+@media (max-width:767.98px){
+  .about-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  .about-bottom{
+    margin: 200px 0 230px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__image{
+      display: block;
+      width: 300px;
+      object-fit: cover;
+        border-radius: 15%;
+      }
+      &__text{
+          width: 100%;
+      >p{
+          font-size: 23px;
+          font-weight: 500;
+          margin-bottom: 45px;
+      }
+      }
+}
+}
+@media (max-width:479.98px){
+  .about-top{
+    margin-bottom: 130px;
+    &__image{
+      width: 75% ;
+      margin: 0 40px 50px 0;
+    }
+  }
+  .about-bottom{
+    &__text{
+      >p{
+      font-size: 20px;
+
+      }
+    }
+  }
+}
+
+@media (max-width:767.98px){
+  .contacts-inner{
+    min-height: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &__item{
+      margin-bottom: 30px;
+    }
+}
+}
+//====================================================================================================
+ol.gradient-list {
+    counter-reset: gradient-counter;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+    > li {
+      background: white;
+      line-height: 1.4;
+      border-radius: 0 0.5rem 0.5rem 0.5rem;
+      @extend %boxshadow;
+      counter-increment: gradient-counter;
+      margin-top: 1rem;
+      min-height: 3rem;
+      padding: 1rem 1rem 1rem 3rem;
+      position: relative;
+      font-size: 15px;
+      &::before,
+      &::after {
+        background: linear-gradient(135deg, $blue 0%,$green 100%);
+        border-radius: 1rem 1rem 0 1rem;
+        content: '';
+        height: 3rem;
+        left: -1rem;
+        overflow: hidden;
+        position: absolute;
+        top: -1rem;
+        width: 3rem;
+      }
+      &::before {
+        align-items: flex-end;
+        @extend %boxshadow;
+        content: counter(gradient-counter);
+        color: $black;
+        display: flex;
+        font: 900 1.5em/1 'Montserrat';
+        justify-content: flex-end;
+        padding: 0.125em 0.25em;
+        z-index: 1;
+      }
+      @for $i from 1 through 5 {
+        &:nth-child(10n+#{$i}):before {
+          background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
+        }
+      }
+      @for $i from 6 through 10 {
+        &:nth-child(10n+#{$i}):before {
+          background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+        }
+      }
+      + li {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .about-bottom{
+    display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 60vh;
+  margin: 50px auto;
+
+    &__image{
+    height: 100%;
+    object-fit: cover;
+      border-radius: 15%;
+    }
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 75%;
+    >p{
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 45px;
+        line-height: 1.2;
+    }
+    }
+}
+//====================================================================================================
+
+.contacts-inner{
+  display: flex;
+  flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100%;
+    max-width: 100%;
+justify-content: space-between; 
+margin-bottom: 150px;
+  .item-contacts {
+  
+      // .item-contacts__icon
+      text-align: center;
+  
+      &__icon {
+        >svg{
+          width: 80px;
+          height: 100%;
+        }
+      }
+  
+      // .item-contacts__title
+  
+      &__title {
+        font-weight: 700;
+    font-family: "Abril Fatface";
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin: 20px auto 0;
+    color: #999999;
+      }
+      >p{
+        font-size: 1.125rem;
+        margin: 20px auto 0;
+      }
+  }
+
+  
 }
