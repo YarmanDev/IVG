@@ -368,6 +368,10 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #9a9dbd;
 }
 
+.footer-item {
+  text-align: center;
+}
+
 .footer-item__title {
   font-size: 18px;
   margin-bottom: 20px;
@@ -1316,6 +1320,10 @@ ol.gradient-list > li + li {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 30px 30px;
+  }
+
+  .home-gallery__link {
+    pointer-events: none;
   }
 
   .home-gallery__link > img {
