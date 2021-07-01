@@ -826,6 +826,9 @@ ol.gradient-list > li::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about-top__image {
@@ -1173,6 +1176,16 @@ ol.gradient-list > li + li {
   }
 
   .home-gallery__link:nth-child(8) {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .home-gallery__link:nth-child(11) {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .home-gallery__link:nth-child(18) {
     grid-row: span 2;
     grid-column: span 2;
   }

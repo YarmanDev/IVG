@@ -103,6 +103,15 @@
             grid-row: span 2;
             grid-column: span 2;
         }
+        &:nth-child(11){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        &:nth-child(18){
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+       
         &:last-child{
         display: block;
     }
